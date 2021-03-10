@@ -7,6 +7,7 @@ import { CoreModule } from './core/core.module';
 import { HomeComponent } from './home/home/home.component';
 import { PostsListComponent } from './home/posts-list/posts-list.component';
 import { PostDetailComponent } from './post/post-detail/post-detail.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { PostDetailComponent } from './post/post-detail/post-detail.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     CoreModule
   ],
   providers: [],
