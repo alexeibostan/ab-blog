@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/search/search.component';
 import { CategoriesListComponent } from './components/categories-list/categories-list.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,12 +15,14 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     CategoriesListComponent, NotFoundComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
   exports:[
     FooterComponent, 
     HeaderComponent, 
     SearchComponent, 
-    CategoriesListComponent]
+    CategoriesListComponent
+  ]
 })
 export class CoreModule { }
