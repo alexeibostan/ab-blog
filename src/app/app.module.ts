@@ -17,7 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     PostDetailComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     CoreModule
