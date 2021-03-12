@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectionStrategy, Output, EventEmitter } from '@angular/core';
 import { Post } from '../../core/models/post';
 
 @Component({
@@ -10,6 +10,8 @@ import { Post } from '../../core/models/post';
 export class PostsListComponent implements OnInit {
 
   @Input() posts: Post[] = [];
+
+  @Output() selected = new EventEmitter<number>();
 
   constructor() { }
 

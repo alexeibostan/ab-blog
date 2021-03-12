@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Post } from '../../core/models/post';
 import { PostService } from '../../core/post.service';
@@ -12,10 +13,14 @@ export class HomeComponent implements OnInit {
 
   posts$!: Observable<Post[]>;
 
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService, private router: Router) { }
 
   ngOnInit(): void {
     this.posts$ = this.postService.getPosts();
+  }
+
+  onSelectedPost(id: number) {
+    this.router.navigateByUrl(`/post/${id}`);
   }
 
 }

@@ -4,10 +4,10 @@
 <div class="card-body">
     <h2 class="card-title">{{post.title}}</h2>
     <p class="card-text">{{post.body | slice:0:100}}</p>
-    <a href="#" class="btn btn-primary">Read More &rarr;</a>
+    <a (click)="selected.emit(post.id)" class="btn btn-primary">Read More &rarr;</a>
 </div>
 <div class="card-footer text-muted">
-    Posted on January 1, 2020 by
-    <a href="#">Start Bootstrap</a>
+    Posted on {{post.createdAt | date}} by
+    <a href="#">{{post.author?.name}} {{post.author?.surname}}</a>
 </div>
 </div>
